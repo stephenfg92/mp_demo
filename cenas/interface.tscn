@@ -1,0 +1,115 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/Entrada.gd" type="Script" id=1]
+
+[node name="Interface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1467.0
+margin_bottom = -881.0
+__meta__ = {
+"_edit_horizontal_guides_": [ 381.004, 446.352, 413.422 ],
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Nome" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 2.0
+margin_right = 104.0
+margin_bottom = 16.0
+text = "Nome"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ping" type="Label" parent="."]
+margin_left = 1.95001
+margin_top = 58.2997
+margin_right = 41.95
+margin_bottom = 72.2997
+text = "Latência:
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ms" type="Label" parent="."]
+margin_left = 140.0
+margin_top = 58.3
+margin_right = 180.0
+margin_bottom = 72.3
+text = "ms"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Entrada" type="LineEdit" parent="."]
+margin_left = 73.0
+margin_top = 54.0
+margin_right = 131.0
+margin_bottom = 78.0
+text = "0"
+max_length = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Interpolação" type="Label" parent="."]
+margin_left = 1.95001
+margin_top = 436.3
+margin_right = 85.95
+margin_bottom = 450.3
+text = "Interpolação"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Entrada_interpolacao" type="CheckButton" parent="."]
+margin_left = 96.0
+margin_top = 423.143
+margin_right = 172.0
+margin_bottom = 463.143
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Predição" type="Label" parent="."]
+margin_left = 1.95001
+margin_top = 370.3
+margin_right = 85.95
+margin_bottom = 384.3
+text = "Predição"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Entrada_predicao" type="CheckButton" parent="."]
+margin_left = 96.0
+margin_top = 357.143
+margin_right = 172.0
+margin_bottom = 397.143
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reconciliação" type="Label" parent="."]
+margin_left = 1.95001
+margin_top = 403.3
+margin_right = 88.95
+margin_bottom = 417.3
+text = "Reconciliação"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Entrada_reconciliacao" type="CheckButton" parent="."]
+margin_left = 96.0
+margin_top = 390.143
+margin_right = 172.0
+margin_bottom = 430.143
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_changed" from="Entrada" to="Entrada" method="_on_LineEdit_text_changed"]

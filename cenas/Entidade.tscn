@@ -1,0 +1,46 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0014_15.png" type="Texture" id=1]
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0015_16.png" type="Texture" id=2]
+[ext_resource path="res://assets/Humano_andando/andando__0001_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Humano_andando/andando__0002_3.png" type="Texture" id=4]
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0007_8.png" type="Texture" id=5]
+[ext_resource path="res://assets/Humano_andando/andando__0000_1.png" type="Texture" id=6]
+[ext_resource path="res://assets/Humano_andando/andando__0003_4.png" type="Texture" id=7]
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0011_12.png" type="Texture" id=8]
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0003_4.png" type="Texture" id=10]
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0005_6.png" type="Texture" id=11]
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0012_13.png" type="Texture" id=13]
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0006_7.png" type="Texture" id=15]
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0004_5.png" type="Texture" id=16]
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0001_2.png" type="Texture" id=18]
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0000_1.png" type="Texture" id=19]
+[ext_resource path="res://assets/Humano_ocioso/ocioso__0002_3.png" type="Texture" id=20]
+[ext_resource path="res://scripts/Entidade.gd" type="Script" id=21]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "ocioso",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4, 4 )
+
+[node name="Entidade" type="KinematicBody2D"]
+script = ExtResource( 21 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "ocioso"
+frame = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
